@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Anand Kumar — Full-Stack Web Developer specializing in React, Node.js, and modern web technologies. Building scalable, high-performance applications.">
+    <title>Anand Kumar — Full-Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Grain Overlay -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-code">
+                <span class="lc-bracket">{</span>
+                <span class="lc-text">AK</span>
+                <span class="lc-bracket">}</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-line" id="scroll-line"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="wrap header-inner">
+            <a href="#hero" class="brand" id="brand">
+                <span class="brand-icon">{</span>AK<span class="brand-icon">}</span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <a href="#hero" class="nav-item active" data-sec="hero">Home</a>
+                <a href="#about" class="nav-item" data-sec="about">About</a>
+                <a href="#projects" class="nav-item" data-sec="projects">Projects</a>
+                <a href="#stack" class="nav-item" data-sec="stack">Tech Stack</a>
+                <a href="#contact" class="nav-item" data-sec="contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fa-regular fa-moon" id="icon-moon"></i>
+                    <i class="fa-regular fa-sun" id="icon-sun"></i>
+                </button>
+                <a href="#contact" class="header-cta" id="header-cta">
+                    <span class="cta-dot"></span>
+                    Available for work
+                </a>
+                <button class="burger" id="burger" aria-label="Menu">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mob-nav" id="mob-nav">
+        <nav class="mob-nav-inner">
+            <a href="#hero" class="mob-link">Home</a>
+            <a href="#about" class="mob-link">About</a>
+            <a href="#projects" class="mob-link">Projects</a>
+            <a href="#stack" class="mob-link">Tech Stack</a>
+            <a href="#contact" class="mob-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         HERO
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+        <div class="wrap hero-wrap">
+            <div class="hero-left">
+                <div class="hero-badge" id="hero-badge">
+                    <span class="badge-dot"></span>
+                    Full-Stack Web Developer
+                </div>
+
+                <h1 class="hero-h1" id="hero-h1">
+                    <span class="h1-line"><span class="h1-word">Building the</span></span>
+                    <span class="h1-line"><span class="h1-word">web, one <em>clean</em></span></span>
+                    <span class="h1-line"><span class="h1-word"><em>commit</em> at a time.</span></span>
+                </h1>
+
+                <p class="hero-p" id="hero-p">I design and develop full-stack applications with React, Node.js, and
+                    modern web technologies — focused on performance, scalability, and pixel-perfect UI.</p>
+
+                <div class="hero-btns" id="hero-btns">
+                    <a href="#projects" class="btn-fill">
+                        <span>View Projects</span>
+                        <i class="fa-solid fa-arrow-down-long"></i>
+                    </a>
+                    <a href="https://github.com/AnandK-coder" target="_blank" rel="noopener" class="btn-ghost">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <!-- Code Terminal Card -->
+                <div class="terminal" id="terminal">
+                    <div class="term-bar">
+                        <div class="term-dots">
+                            <span class="td red"></span>
+                            <span class="td yellow"></span>
+                            <span class="td green"></span>
+                        </div>
+                        <span class="term-title">anand@dev ~ </span>
+                    </div>
+                    <div class="term-body">
+                        <div class="term-line" id="tl-1">
+                            <span class="t-prompt">$</span>
+                            <span class="t-cmd">whoami</span>
+                        </div>
+                        <div class="term-line t-output" id="tl-2">
+                            <span>Anand Kumar — Full-Stack Developer</span>
+                        </div>
+                        <div class="term-line" id="tl-3">
+                            <span class="t-prompt">$</span>
+                            <span class="t-cmd">cat skills.json</span>
+                        </div>
+                        <div class="term-line t-output t-json" id="tl-4">
+                            <span class="t-key">"frontend"</span>: <span class="t-val">["React", "Next.js",
+                                "TypeScript"]</span>
+                        </div>
+                        <div class="term-line t-output t-json" id="tl-5">
+                            <span class="t-key">"backend"</span>: <span class="t-val">["Node.js", "Express",
+                                "MongoDB"]</span>
+                        </div>
+                        <div class="term-line t-output t-json" id="tl-6">
+                            <span class="t-key">"tools"</span>: <span class="t-val">["Git", "Docker", "Figma"]</span>
+                        </div>
+                        <div class="term-line" id="tl-7">
+                            <span class="t-prompt">$</span>
+                            <span class="t-cmd t-cursor">npm run build-something-great</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Marquee -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>React</span><span class="mq-dot">◆</span>
+                <span>Node.js</span><span class="mq-dot">◆</span>
+                <span>TypeScript</span><span class="mq-dot">◆</span>
+                <span>Next.js</span><span class="mq-dot">◆</span>
+                <span>MongoDB</span><span class="mq-dot">◆</span>
+                <span>Express</span><span class="mq-dot">◆</span>
+                <span>PostgreSQL</span><span class="mq-dot">◆</span>
+                <span>Docker</span><span class="mq-dot">◆</span>
+                <span>React</span><span class="mq-dot">◆</span>
+                <span>Node.js</span><span class="mq-dot">◆</span>
+                <span>TypeScript</span><span class="mq-dot">◆</span>
+                <span>Next.js</span><span class="mq-dot">◆</span>
+                <span>MongoDB</span><span class="mq-dot">◆</span>
+                <span>Express</span><span class="mq-dot">◆</span>
+                <span>PostgreSQL</span><span class="mq-dot">◆</span>
+                <span>Docker</span><span class="mq-dot">◆</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         ABOUT
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="sec about-sec" id="about">
+        <div class="wrap about-content">
+            <div class="about-info-col">
+                <span class="sec-label" id="about-label">About Me</span>
+                <h2 class="sec-heading" id="about-heading">Full-stack developer who cares about every pixel <em>&</em>
+                    every millisecond.</h2>
+                <div class="about-text">
+                    <p>I'm Anand Kumar — A full-stack web developer building production-grade applications. I work
+                        across the entire stack: from crafting responsive React frontends to designing RESTful APIs with
+                        Node.js and managing databases.</p>
+                    <p>I obsess over writing clean, maintainable code and delivering UIs that feel fast, look sharp, and
+                        work flawlessly on every device. Every project I build is an opportunity to push the boundaries
+                        of what's possible on the web.</p>
+                </div>
+
+                <div class="stat-row">
+                    <div class="stat-block" id="stat-1">
+                        <span class="stat-num">4+</span>
+                        <span class="stat-lbl">Fullstack Projects</span>
+                    </div>
+                    <div class="stat-block" id="stat-2">
+                        <span class="stat-num">MERN/PERN</span>
+                        <span class="stat-lbl">Core Stack</span>
+                    </div>
+                    <div class="stat-block" id="stat-3">
+                        <span class="stat-num">Clean Code</span>
+                        <span class="stat-lbl">Architecture Focused</span>
+                    </div>
+                    <div class="stat-block" id="stat-4">
+                        <span class="stat-num">Available</span>
+                        <span class="stat-lbl">Immediate Joining</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         PROJECTS
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="sec projects-sec" id="projects">
+        <div class="wrap">
+            <div class="sec-top">
+                <div>
+                    <span class="sec-label" id="projects-label">Project Work</span>
+                    <h2 class="sec-heading" id="projects-heading">Things I've built.</h2>
+                </div>
+                <p class="sec-desc">Real-world projects spanning SaaS dashboards, e-commerce platforms, and developer
+                    tools.</p>
+            </div>
+        </div>
+
+        <div class="proj-list" id="proj-list">
+            <!-- Project 1 -->
+            <article class="proj-row" id="proj-1">
+                <a href="https://architect-ai-x.vercel.app/" target="_blank" rel="noopener" class="proj-link">
+                    <div class="wrap proj-inner">
+                        <span class="proj-num">01</span>
+                        <div class="proj-content">
+                            <div class="proj-header-line">
+                                <h3 class="proj-title">ArchitectAI X — 3D Software City & Codebase Twin</h3>
+                                <div class="proj-tags">
+                                    <span>Three.js</span><span>React</span><span>Node.js</span><span>AI</span>
+                                </div>
+                            </div>
+                            <p class="proj-desc">Interactive software visualization tool and codebase digital twin.
+                                Translates complex software repositories into a stunning 3D Digital City and 2D System
+                                Architecture Diagrams with real-time analytics, AI chat, security scanners, and
+                                simulation engines.</p>
+                        </div>
+                        <div class="proj-thumb">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
+                                alt="ArchitectAI X">
+                        </div>
+                        <div class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="proj-row" id="proj-2">
+                <a href="https://dev-connect-client-nine.vercel.app/" target="_blank" rel="noopener" class="proj-link">
+                    <div class="wrap proj-inner">
+                        <span class="proj-num">02</span>
+                        <div class="proj-content">
+                            <div class="proj-header-line">
+                                <h3 class="proj-title">DevConnect — Developer Portfolio & Job Matching Platform</h3>
+                                <div class="proj-tags">
+                                    <span>Next.js</span><span>React</span><span>AI</span><span>Node.js</span>
+                                </div>
+                            </div>
+                            <p class="proj-desc">LinkedIn + GitHub + Job Board tailored specifically for developers.
+                                Combines professional portfolio showcasing, AI-powered job matching, developer community
+                                features, and skill analytics insights.</p>
+                        </div>
+                        <div class="proj-thumb">
+                            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=900&q=80"
+                                alt="DevConnect Platform">
+                        </div>
+                        <div class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="proj-row" id="proj-3">
+                <a href="https://github.com/AnandK-coder/Microservices" target="_blank" rel="noopener"
+                    class="proj-link">
+                    <div class="wrap proj-inner">
+                        <span class="proj-num">03</span>
+                        <div class="proj-content">
+                            <div class="proj-header-line">
+                                <h3 class="proj-title">Authentication Microservice</h3>
+                                <div class="proj-tags">
+                                    <span>Node.js</span><span>TypeScript</span><span>Prisma</span><span>Redis</span><span>PostgreSQL</span>
+                                </div>
+                            </div>
+                            <p class="proj-desc">Secure Node.js authentication microservice featuring JWT access/refresh
+                                tokens (RS256), OAuth2 social login, multi-factor authentication (MFA), Redis-backed
+                                session management, Pino logging, Zod validation, and rate-limited login flows.</p>
+                        </div>
+                        <div class="proj-thumb">
+                            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=900&q=80"
+                                alt="Authentication Microservice">
+                        </div>
+                        <div class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="proj-row" id="proj-4">
+                <a href="https://expense-iq-three.vercel.app/" target="_blank" rel="noopener" class="proj-link">
+                    <div class="wrap proj-inner">
+                        <span class="proj-num">04</span>
+                        <div class="proj-content">
+                            <div class="proj-header-line">
+                                <h3 class="proj-title">ExpenseIQ — AI-Powered Smart Expense Tracker</h3>
+                                <div class="proj-tags">
+                                    <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span>
+                                </div>
+                            </div>
+                            <p class="proj-desc">Modern full-stack web application for tracking expenses and managing
+                                budgets with AI-powered insights, automated categorization, and clean financial
+                                analytics dashboards.</p>
+                        </div>
+                        <div class="proj-thumb">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+                                alt="ExpenseIQ Tracker">
+                        </div>
+                        <div class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         TECH STACK
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="sec stack-sec" id="stack">
+        <div class="wrap">
+            <div class="sec-top">
+                <div>
+                    <span class="sec-label" id="stack-label">Tech Stack</span>
+                    <h2 class="sec-heading" id="stack-heading">Tools of the trade.</h2>
+                </div>
+                <p class="sec-desc">The technologies I use daily to build production-ready applications.</p>
+            </div>
+
+            <div class="stack-grid" id="stack-grid">
+                <!-- Frontend -->
+                <div class="stack-category">
+                    <h3 class="stack-cat-title">Frontend</h3>
+                    <div class="stack-items">
+                        <div class="stack-card" id="sk-1">
+                            <i class="fa-brands fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="stack-card" id="sk-2">
+                            <i class="fa-brands fa-js"></i>
+                            <span>Next.js</span>
+                        </div>
+                        <div class="stack-card" id="sk-3">
+                            <i class="fa-brands fa-js"></i>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="stack-card" id="sk-4">
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <span>CSS / SASS</span>
+                        </div>
+                        <div class="stack-card" id="sk-5">
+                            <i class="fa-brands fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="stack-category">
+                    <h3 class="stack-cat-title">Backend</h3>
+                    <div class="stack-items">
+                        <div class="stack-card" id="sk-6">
+                            <i class="fa-brands fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="stack-card" id="sk-7">
+                            <i class="fa-solid fa-server"></i>
+                            <span>Express</span>
+                        </div>
+                        <div class="stack-card" id="sk-8">
+                            <i class="fa-solid fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="stack-card" id="sk-9">
+                            <i class="fa-solid fa-database"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="stack-card" id="sk-10">
+                            <i class="fa-solid fa-fire"></i>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="stack-category">
+                    <h3 class="stack-cat-title">Tools & DevOps</h3>
+                    <div class="stack-items">
+                        <div class="stack-card" id="sk-11">
+                            <i class="fa-brands fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="stack-card" id="sk-12">
+                            <i class="fa-brands fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="stack-card" id="sk-13">
+                            <i class="fa-brands fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="stack-card" id="sk-14">
+                            <i class="fa-brands fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="stack-card" id="sk-15">
+                            <i class="fa-solid fa-cloud"></i>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         CONTACT
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="sec contact-sec" id="contact">
+        <div class="wrap contact-wrap">
+            <div class="contact-left">
+                <span class="sec-label" id="contact-label">Contact</span>
+                <h2 class="contact-h2" id="contact-h2">Got a project? <br>Let's <em>build</em> it.</h2>
+                <p class="contact-p">Whether you need a full-stack app, a landing page, or technical consulting — I'd
+                    love to hear about it.</p>
+
+                <div class="contact-links">
+                    <a href="mailto:anand.kumar@gmail.com" class="c-link" id="c-email">
+                        <i class="fa-regular fa-envelope"></i>
+                        anandsh237@gmail.com
+                    </a>
+                    <a href="tel:+919876543210" class="c-link" id="c-phone">
+                        <i class="fa-solid fa-phone"></i>
+                        +91 9625332527
+                    </a>
+                    <div class="c-link" id="c-loc">
+                        <i class="fa-regular fa-location-dot"></i>
+                        Delhi, India (GMT+5:30)
+                    </div>
+                </div>
+
+                <div class="socials" id="socials">
+                    <a href="https://github.com/AnandK-coder" target="_blank" rel="noopener" class="soc"
+                        aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="soc" aria-label="LinkedIn"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener" class="soc" aria-label="Twitter"><i
+                            class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://dribbble.com" target="_blank" rel="noopener" class="soc" aria-label="Dribbble"><i
+                            class="fa-brands fa-dribbble"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <form class="cform" id="cform" novalidate>
+                    <div class="cform-row">
+                        <div class="cform-field">
+                            <label for="f-name">Name</label>
+                            <input type="text" id="f-name" placeholder="Your name" required>
+                        </div>
+                        <div class="cform-field">
+                            <label for="f-email">Email</label>
+                            <input type="email" id="f-email" placeholder="you@email.com" required>
+                        </div>
+                    </div>
+                    <div class="cform-field">
+                        <label for="f-subject">Subject</label>
+                        <input type="text" id="f-subject" placeholder="Project inquiry" required>
+                    </div>
+                    <div class="cform-field">
+                        <label for="f-message">Message</label>
+                        <textarea id="f-message" rows="5" placeholder="Tell me about your project..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-fill cform-submit" id="cform-submit">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="wrap footer-inner">
+            <div class="footer-left">
+                <span class="brand"><span class="brand-icon">{</span>AK<span class="brand-icon">}</span></span>
+                <p>&copy; 2026 Anand Kumar. Crafted with clean code.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="alert">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-msg">Message sent!</span>
+    </div>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
